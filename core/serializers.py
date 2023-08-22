@@ -5,21 +5,9 @@ class ArticleSerializer(ModelSerializer):
 
     class Meta :
         model = Article
-        fields = [ 'id','matiere' ,'nom' ,'editeur','prix' , 'image']
+        fields = [ 'id','matiere' ,'nom' ,'auteur','editeur', 'serie' , 'niveau', 'prix' , 'image']
 
 
-
-class SerieSerializer(ModelSerializer):
-
-    class Meta :
-        model = Serie
-        fields = [ 'id','article' ,'choice']
-
-class NiveauSerializer(ModelSerializer):
-
-    class Meta :
-        model = Niveau
-        fields = [ 'id','article' ,'choice']
 
 class UserSerializer(ModelSerializer):
 
@@ -27,8 +15,12 @@ class UserSerializer(ModelSerializer):
         model = User
         fields = [ 'id','nom' ,'prenom','email', 'contact_1' , 'contact_2' , 'residence' , 'password']
 
-class CommandeSerializer(ModelSerializer):
+class PanierSerializer(ModelSerializer):
+    class Meta :
+        model = Panier
+        fields = [ 'id','user','article', 'prix' , 'quantite']
 
+class CommandeSerializer(ModelSerializer):
     class Meta :
         model = Commande
-        fields = [ 'id','article' ,'user','date', 'longitude' , 'latitute' , 'prix']
+        fields = [ 'id','user' ,'date_commande' , 'date_livraison', 'status', 'prix', 'description','longitude' , 'latitude' ]
