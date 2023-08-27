@@ -126,8 +126,13 @@ class User(models.Model):
 
 
 class Panier(models.Model):
+    etat = (
+        ('En Cours', 'En Cours'),
+        ('Livré', 'Livré'),
+          )
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     article = models.ForeignKey(Article , on_delete=models.CASCADE)
+    status = models.CharField(max_length=255 , choices=etat ,default="En Cours")
     prix = models.CharField(max_length=255)
     quantite = models.IntegerField(default=1)
     class Meta:
@@ -142,7 +147,7 @@ class Commande(models.Model):
     )
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     date_commande = models.DateTimeField()
-    date_livraison = models.DateField(blank=True)
+   # date_livraison = models.DateField(blank=True)
     status = models.CharField(max_length=255 , choices=etat ,default="En Cours")
     prix = models.CharField(max_length=255)
     description = models.CharField(max_length=200000)

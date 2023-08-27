@@ -1,4 +1,5 @@
 from rest_framework.routers import DefaultRouter
+from django.urls import path
 from core.api_views import *
 
 router = DefaultRouter()
@@ -12,3 +13,5 @@ router.register(r'commande', CommandeViewset, basename='commande')
 urlpatterns = [ 
 ]
 urlpatterns += router.urls
+
+    
