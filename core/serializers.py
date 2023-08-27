@@ -18,9 +18,9 @@ class UserSerializer(ModelSerializer):
 class PanierSerializer(ModelSerializer):
     class Meta :
         model = Panier
-        fields = [ 'id','user','article', 'prix' , 'quantite']
+        fields = [ 'id','user','article', 'status' , 'prix' , 'quantite']
 
 class CommandeSerializer(ModelSerializer):
     class Meta :
         model = Commande
-        fields = [ 'id','user' ,'date_commande' , 'date_livraison', 'status', 'prix', 'description','longitude' , 'latitude' ]
+        fields = [ 'id','user' ,'date_commande' , 'status', 'prix', 'description','longitude' , 'latitude' ]

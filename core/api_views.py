@@ -4,6 +4,8 @@ from core.serializers import *
 from core.models import  *
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.generics import UpdateAPIView
+
 
 
 
@@ -39,4 +41,4 @@ class CommandeViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , Retri
         data = {'message': 'Fonction personnalisée appelée avec succès'}
         return Response(data)
 
-    
+
