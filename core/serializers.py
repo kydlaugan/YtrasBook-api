@@ -13,7 +13,7 @@ class UserSerializer(ModelSerializer):
 
     class Meta :
         model = User
-        fields = [ 'id','nom' ,'prenom','email', 'contact_1' , 'contact_2' , 'residence' , 'password']
+        fields = [ 'id','nom' ,'prenom','email', 'contact' , 'residence' , 'password']
 
 class PanierSerializer(ModelSerializer):
     class Meta :

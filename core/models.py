@@ -116,8 +116,7 @@ class User(models.Model):
     nom = models.CharField(max_length=255)
     prenom =models.CharField(max_length=255 , blank=True)
     email = models.CharField(max_length=255, unique=True )
-    contact_1  = models.CharField(max_length=30 , unique=True)
-    contact_2  = models.CharField(max_length=30 , unique=True , blank=True)
+    contact  = models.CharField(max_length=30 , unique=True)
     residence = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
     class Meta:
