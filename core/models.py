@@ -128,7 +128,7 @@ class User(models.Model):
 class Panier(models.Model):
     etat = (
         ('En Cours', 'En Cours'),
-        ('Livré', 'Livré'),
+        ('Ajouté', 'Ajouté'),
           )
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     article = models.ForeignKey(Article , on_delete=models.CASCADE)
