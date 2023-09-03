@@ -137,6 +137,8 @@ if not DEBUG:
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 STATIC_URL = 'static/'
 
 # Default primary key field type
