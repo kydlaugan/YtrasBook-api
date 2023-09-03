@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<title>{% block title %} Commandez vos livres  avec | YtrasBook{% endblock%}</title>
+<link rel="stylesheet" href="{% static 'css/main.css' %}">  
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top  header-transparent ">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <div class="logo">
+      <img src="{% static 'image/ytras_book.png' %}" alt="">
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active fw-bold" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto fw-bold" href="#features">Utilisation</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+<section id="hero" class="d-flex align-items-center p-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch order-2 order-lg-1" data-aos="fade-up">
+        <div class="">
+          <h1>Bienvenue Sur YtrasBook</h1>
+          <h2>Il s'agit d'une plateforme mobile propulsé par Ytras qui permet aux camerounais de commander  à distances des fournitures et accessoires scolaires en vue d'une livraison à domicile . </h2>
+          <a href="{% static 'apk/YtrasBook.apk'%}" download="YtrasBook.apk" class="download-btn mb-4"><i class="bi bi-google-play"></i>Telecharger</a>
+          <a href="https://api.whatsapp.com/send?phone=237697887182" class="download-btn mb-4"><i class="bi bi-person-lines-fill"></i>Contactez-nous</a>
+        </div>
+      </div>
+      <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img " data-aos="fade-up">
+        <div class="d-flex justify-content-center">
+          <img src="{% static 'image/img.png' %}" alt="img-fluid"  class="img-modify">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+
+<section id="features" class="features p-0">
+  <div class="container">
+
+    <div class="section-title p-0">
+      <h2 class="mt-5">Utilisation</h2>
+      <p>Un design simple et attrayant pour ameliorer votre expérience</p>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+        <div class="content d-flex flex-column justify-content-center p-0">
+          <div class="row">
+            <div class="col-md-6 icon-box" data-aos="fade-up">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Telecharger l'application</h4>
+              <p>Cliquer sur le ci-dessus pour le telechargement</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Consulter les articles</h4>
+              <p>Une fois installé ,  consultez les fournitures disponibles</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Creer votre compte </h4>
+              <p>Avant de commander un article , veillez donner vos informations pour la livraison</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Ajouter un article au panier</h4>
+              <p>Maintenant vous pouvez ajouter un article dans votre panier</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Passer une commande</h4>
+              <p>Passer votre commande pour etre livré</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4>Consulter votre historique</h4>
+              <p>Consultez la liste de vos anciennes commandes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2 p-0" data-aos="fade-left" data-aos-delay="100">
+        <img src="{% static 'image/image.png' %}" alt="img-fluid" class="img-fluid img-modify">
+      </div>
+    </div>
+
+  </div>
+</section><!-- End App Features Section -->
+
+     <!-- Debut footer--->
+     <div class="container bg-body-tertiary">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted fw-bold">&copy; 2023 Ytras , Inc</p>
+  
+      <a href="mailto:kydlaugan71@gmail.com" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+          YtrasBook
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#hero" class="nav-link px-2 text-muted fw-bold">Home</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link px-2 text-muted fw-bold">Utilisation</a></li>
+      </ul>
+      </footer>
+  </div>  
+  <!-- Fin footer--->
+
+  
+{% endblock content %}
