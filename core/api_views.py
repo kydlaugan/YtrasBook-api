@@ -10,26 +10,37 @@ from rest_framework.generics import UpdateAPIView
 
 
 class ArticleViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
-
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
 
-    
+class LivrePrimaireViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
+    serializer_class = LivrePrimaireSerializer
+    queryset = LivrePrimaire.objects.all()
+
+class LivreSecondaireViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
+    serializer_class = LivreSecondaireSerializer
+    queryset = LivreSecondaire.objects.all()
+
+class CahiersViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
+    serializer_class = CahiersSerializer
+    queryset = Cahiers.objects.all()
+
+class AccessoireViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
+    serializer_class = AccessoireSerializer
+    queryset = Accessoire.objects.all()
+
 
 class UserViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
-
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
   
   
 class PanierViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
-
     serializer_class = PanierSerializer
     queryset = Panier.objects.all() 
 
 class CommandeViewset(CreateModelMixin ,UpdateModelMixin ,ListModelMixin , RetrieveModelMixin ,DestroyModelMixin , GenericViewSet):
-
     serializer_class = CommandeSerializer
     queryset = Commande.objects.all()
 
