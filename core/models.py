@@ -15,7 +15,7 @@ class Article(models.Model):
     )
     classe_enum = (
         ('1ère Maternelle', '1ère Maternelle'),
-        ('2éme Maternelle', '2éme Maternelle'),
+        ('2ème Maternelle', '2ème Maternelle'),
         ('SIL', 'SIL'),
         ('CP', 'CP'),
         ('CE1', 'CE1'),
