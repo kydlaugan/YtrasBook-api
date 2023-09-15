@@ -14,7 +14,7 @@ class Article(models.Model):
         ('Aucun', 'Aucun'),
     )
     classe_enum = (
-        ('1ére Maternelle', '1ére Maternelle'),
+        ('1ère Maternelle', '1ère Maternelle'),
         ('2éme Maternelle', '2éme Maternelle'),
         ('SIL', 'SIL'),
         ('CP', 'CP'),
